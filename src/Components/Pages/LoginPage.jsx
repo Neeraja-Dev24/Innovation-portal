@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Layout, Typography, Form, Input, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from '../UserContext/UserContext'
+import { useUser } from '../../UserContext/UserContext';
 import './LoginPage.css';
 
 const { Title } = Typography;
@@ -17,7 +17,7 @@ const LoginPage = () => {
     setLoading(true);
     const { username, password } = values;
 
-    // Mock role-based redirection (replace this with your real API call)
+    // Mock role-based redirection (replace this with real API call)
     setTimeout(() => {
       setLoading(false);
       if (username === 'employee' && password === '1234') {

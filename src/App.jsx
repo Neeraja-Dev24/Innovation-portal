@@ -1,10 +1,10 @@
 
 
 import './App.css'
-import LoginPage from './Pages/LoginPage'
+import LoginPage from './Components/Pages/LoginPage';
+import EmployeeDashboard from './Components/EmployeeDashboard/EmployeeDashboard';
 import { Routes, Route } from 'react-router-dom';
 import { UserProvider } from './UserContext/UserContext';
-import EmployeeDashboard from "./EmployeeDashboard/EmployeeDashboard";
 // import ReviewerDashboard from "./ReviewerDashboard/ReviewerDashboard";
 function App() {
   return (

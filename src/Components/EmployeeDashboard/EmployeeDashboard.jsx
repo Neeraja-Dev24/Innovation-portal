@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Layout, Typography, Button, Form, Input, Table, message } from 'antd';
 import { useNavigate } from 'react-router-dom';
-import { useUser } from '../Usercontext/UserContext';
+import { useUser } from '../../UserContext/UserContext';
 
 import './EmployeeDashboard.css';
 
