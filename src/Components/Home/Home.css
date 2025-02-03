@@ -1,0 +1,90 @@
+
+.idea-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    flex: 1 1 160px;
+  }
+  
+  .idea-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 350px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .idea-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .idea-image {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .idea-title {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  .search-container {
+    text-align: center;
+    margin: 30px 0px;
+  }
+  
+  .search-bar {
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+  }
+  .category {
+    display: inline-block;
+    padding: 4px 8px;
+    background-color: #e6f7ff;
+    color: #1890ff;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  .accepted-details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .accepted-count {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+  }
+  
+  .accepted-count::before {
+    content: '\1F44D'; /* Unicode thumbs-up */
+    margin-right: 8px;
+    font-size: 18px;
+    color: #52c41a;
+  }
+  .ideacard-view {
+    display: block;
+    text-align: center;
+    padding: 8px 12px;
+    background-color: #1890ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: auto;
+    transition: background-color 0.3s;
+  }
+  
+  .ideacard-view:hover {
+    background-color: #40a9ff;
+  }
+  

@@ -1,0 +1,60 @@
+/* Ensure the layout covers the entire screen */
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+  background: #001529;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.welcome-message {
+  margin: 0;
+  color: #fff;
+}
+
+.logout-button {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+
+/* Content Area */
+.content-area {
+  margin-left: 24px; /* Offset for the sidebar */
+  padding: 24px;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.card-title {
+  color: #1890ff;
+}
+
+.image-preview {
+  width: 50px;
+}
+
+.table-container {
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+button.ant-btn-primary {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
