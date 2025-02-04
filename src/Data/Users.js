@@ -1,4 +1,4 @@
-export const Users=[
+const Users=[
     { 
     id:'1',
     name: 'John', 
@@ -24,3 +24,9 @@ export const Users=[
     username: 'employee4',
     }
 ]
+const addUser = (newUser) => {
+    newUser.id = Users.length + 1; // Assign a new unique ID
+    Users.push(newUser);
+  };
+  
+  export { Users, addUser };

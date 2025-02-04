@@ -38,8 +38,8 @@ export default function Home() {
               <div className="idea-content">
                 <h3 className="idea-title">{idea.title} - <span className="category">{idea.category}</span></h3>
                 <div className='accepted-details'>
-                  <p className="accepted-count"><strong>Accepted Count:</strong> {idea.acceptedCount || 0}</p>
-                  <p><strong>Submitted by:</strong> {idea.username}</p>
+                  <p className="accepted-count"><strong>Accepted By: &nbsp;</strong> {idea.acceptedCount || 0}</p>
+                  <p><strong>Submitted by: &nbsp;</strong> {idea.username}</p>
                   </div>
               </div>
               <Link className="ideacard-view" to={`/details/${idea.key}`}>View More</Link>
