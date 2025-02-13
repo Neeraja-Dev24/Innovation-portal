@@ -1,9 +1,8 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { IdeasData } from "../../../Data/IdeasData";
-import { Layout, Typography, Button, Card, Image} from "antd";
+import { Layout, Typography, Button, Card, Image } from "antd";
 import { ArrowLeftOutlined } from "@ant-design/icons";
-import { useUser } from "../../../UserContext/UserContext";
+import { useUser } from "../../../UserContext/useUser";
 import "./IdeaDetails.css";
 
 const { Header, Sider, Content } = Layout;
@@ -16,20 +15,25 @@ const IdeaDetails = () => {
   const [idea, setIdea] = useState(null);
   const [status, setStatus] = useState("");
 
-
   useEffect(() => {
     if (!loggedInUser || loggedInUser.role !== "reviewer") {
       navigate("/");
     }
 
-    const foundIdea = IdeasData.find((idea) => idea.key === key);
-    if (foundIdea) {
-      setIdea(foundIdea);
-      setStatus(foundIdea.status);
-    }
+    // Fetch the data from JSON Server based on idea key
+    fetch(`http://localhost:5000/IdeasData/${key}`)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data) {
+          setIdea(data);
+          setStatus(data.status);
+        }
+      })
+      .catch((error) => {
+        console.error("Error fetching idea:", error);
+        navigate("/reviewer-dashboard"); // Navigate back to the dashboard in case of error
+      });
   }, [key, loggedInUser, navigate]);
-
-
 
   return (
     <Layout className="layout-container">
@@ -51,7 +55,7 @@ const IdeaDetails = () => {
               <Card className="details-card">
                 <h1 className="idea-category"><strong>{idea.title}</strong></h1>
                 <Text className="idea-category"><strong>Category:</strong> {idea.category}</Text>
-                <Text className="idea-description">Summary :{idea.description}</Text>
+                <Text className="idea-description">Summary: {idea.description}</Text>
 
                 {/* User Information */}
                 <Card className="user-card">
@@ -67,8 +71,6 @@ const IdeaDetails = () => {
                     </Button>
                   )}
                 </Card>
-
-               
               </Card>
             ) : (
               <Text>Loading...</Text>
@@ -76,8 +78,6 @@ const IdeaDetails = () => {
           </Content>
         </Layout>
       </Layout>
-
-     
     </Layout>
   );
 };

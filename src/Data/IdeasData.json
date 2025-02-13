@@ -1,0 +1,465 @@
+{
+  "ideasdata": [
+    {
+      "id": "0",
+      "title": "AI for HR",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "category": "Technology",
+      "status": "Approved",
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "1",
+      "username": "John",
+      "email": "john@gmail.com",
+      "acceptedCount": "3",
+      "publishedDate": "2025-12-29",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Cloud Data Storage",
+      "category": "Technology",
+      "description": "A scalable cloud data storage solution",
+      "status": "Rejected",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        },
+        {
+          "id": "1739342697875",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "Tested idea is good",
+          "approvedDate": "2025-02-12",
+          "decision": "Approved"
+        },
+        {
+          "id": "1739342705547",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "Tested idea is good",
+          "approvedDate": "2025-02-12",
+          "decision": "Rejected"
+        },
+        {
+          "id": "1739342711412",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "Tested idea is good",
+          "approvedDate": "2025-02-12",
+          "decision": "Rejected"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "12",
+      "username": "Jane",
+      "email": "jane@gmail.com",
+      "acceptedCount": 1,
+      "publishedDate": "2025-12-29"
+    },
+    {
+      "id": "4",
+      "title": "Cloud Data Storage",
+      "category": "Technology",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "12",
+      "username": "Jane",
+      "email": "jane@gmail.com",
+      "acceptedCount": "1",
+      "publishedDate": "2025-12-29"
+    },
+    {
+      "id": "5",
+      "title": "Cloud Data Storage",
+      "category": "Technology",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "12",
+      "username": "Jane",
+      "email": "jane@gmail.com",
+      "acceptedCount": "1",
+      "publishedDate": "2025-12-29"
+    },
+    {
+      "id": "6",
+      "title": "Cloud Data Storage",
+      "category": "Technology",
+      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        },
+        {
+          "id": "1739344459698",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "Test",
+          "approvedDate": "2025-02-12",
+          "decision": "Approved"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "13",
+      "username": "Anil",
+      "email": "anil@gmail.com",
+      "publishedDate": "2025-12-29",
+      "acceptedCount": 1
+    },
+    {
+      "id": "7",
+      "title": "Cloud Data Storage",
+      "category": "Technology",
+      "description": "A scalable cloud data storage solution",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        },
+        {
+          "id": "1739344540309",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "122222222222222222222222222222222222222222222222222222",
+          "approvedDate": "2025-02-12",
+          "decision": "Approved"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "13",
+      "username": "Anil",
+      "email": "anil@gmail.com",
+      "publishedDate": "2025-12-29",
+      "acceptedCount": 1
+    },
+    {
+      "id": "8",
+      "title": "Case Studies- AI",
+      "description": "A secure voting system using blockchain technology",
+      "category": "Technology",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "1",
+      "username": "John",
+      "email": "anil@gmail.com",
+      "acceptedCount": "1",
+      "publishedDate": "2025-12-29"
+    },
+    {
+      "id": "9",
+      "title": "Business Rule10",
+      "category": "Business",
+      "description": "A scalable cloud data storage solution",
+      "status": "Approved",
+      "reviewerDetails": [
+        {
+          "id": "101",
+          "name": "Reviewer A",
+          "comments": "Great idea!",
+          "approvedDate": "2025-01-10"
+        },
+        {
+          "id": "102",
+          "name": "Reviewer B",
+          "comments": "Needs some improvement.",
+          "approvedDate": "2025-01-12"
+        }
+      ],
+      "files": [
+        {
+          "url": "https://i.pinimg.com/originals/28/2b/fe/282bfe1ebcf03f132fe0d57a56c947c8.jpg",
+          "type": "image"
+        },
+        {
+          "url": "https://example.com/document.pdf",
+          "type": "pdf"
+        }
+      ],
+      "user_id": "3",
+      "username": "John",
+      "email": "john@gmail.com",
+      "acceptedCount": "1",
+      "publishedDate": "2025-12-29"
+    },
+    {
+      "id": "10",
+      "category": "Education",
+      "title": "Tech1",
+      "description": "<p>test</p>",
+      "files": [
+        {
+          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
+          "type": "application/pdf",
+          "url": "blob:http://localhost:5174/52801a3e-31b9-4771-9b1c-2d153eaaafa5"
+        },
+        {
+          "name": "d8021c42-b6a2-45cb-8928-a4fd2a8d9101.xlsx",
+          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+          "url": "blob:http://localhost:5174/2c1d3a29-232f-4d3c-a145-9cb49d141506"
+        }
+      ],
+      "status": "Approved",
+      "user_id": "1",
+      "username": "employee",
+      "reviewerDetails": [],
+      "publishedDate": "2025-02-11",
+      "acceptedCount": 0,
+      "key": 10
+    },
+    {
+      "category": "Business",
+      "title": "idea1",
+      "description": "<p>sdfg</p>",
+      "files": [
+        {
+          "name": "d8021c42-b6a2-45cb-8928-a4fd2a8d9101.xlsx",
+          "url": "blob:http://localhost:5174/4e4848db-9f3a-40b4-a1a4-af4f57a05f79"
+        },
+        {
+          "name": "Aimy_Fairy_Tales_YT_Banner.png",
+          "type": "image/png",
+          "url": "blob:http://localhost:5174/bc5428e0-dd65-430f-b1fc-3cf386967b67"
+        }
+      ],
+      "status": "Approved",
+      "user_id": "1",
+      "username": "employee",
+      "reviewerDetails": [
+        {
+          "id": "1739345660953",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "Testdfghjk",
+          "approvedDate": "2025-02-12",
+          "decision": "Approved"
+        }
+      ],
+      "publishedDate": "2025-02-11",
+      "acceptedCount": 2,
+      "id": "11",
+      "key": 11
+    },
+    {
+      "id": "12",
+      "category": "Security",
+      "title": "Tech1",
+      "description": "<ul>\n<li>wse</li>\n<li>test</li>\n</ul>",
+      "files": [
+        {
+          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
+          "type": "application/pdf",
+          "url": "blob:http://localhost:5173/92c1a5eb-6831-4ab5-bc39-3eddf0cabca5"
+        }
+      ],
+      "status": "Approved",
+      "user_id": "1",
+      "username": "employee",
+      "reviewerDetails": [],
+      "publishedDate": "2025-02-11",
+      "acceptedCount": 0,
+      "key": 12
+    },
+    {
+      "id": "13",
+      "category": "Education",
+      "title": "Test education",
+      "description": "<p>234rtyhj</p>",
+      "files": [
+        {
+          "name": "Aimy_Fairy_Tales_Banner.png",
+          "type": "image/png",
+          "url": "blob:http://localhost:5173/3c0f1c62-1f2a-445e-ada2-458ff1fc4ccf"
+        }
+      ],
+      "status": "Rejected",
+      "user_id": "1",
+      "username": "employee",
+      "email": "john@gmail.com",
+      "reviewerDetails": [
+        {
+          "id": "1739345931285",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "testrgbhngfjyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+          "approvedDate": "2025-02-12",
+          "decision": "Approved"
+        }
+      ],
+      "publishedDate": "2025-02-12",
+      "acceptedCount": 1,
+      "key": 13
+    },
+    {
+      "category": "Business",
+      "title": "gif data test",
+      "description": "<p>Resubmit my idea with updation</p>",
+      "files": [
+        {
+          "name": "200.webp",
+          "url": "blob:http://localhost:5173/c0105382-c1c4-49e4-839e-b23c328fa3ec"
+        },
+        {
+          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
+          "type": "application/pdf",
+          "url": "blob:http://localhost:5173/c323fbf0-0b2f-4f47-8fad-8c47835e3947"
+        }
+      ],
+      "status": "Pending",
+      "user_id": "1",
+      "username": "employee",
+      "email": "emp@123.com",
+      "reviewerDetails": [],
+      "publishedDate": "2025-02-13",
+      "acceptedCount": 0,
+      "id": "14",
+      "key": 14
+    }
+  ]
+}

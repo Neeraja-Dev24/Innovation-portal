@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "John",
+      "role": "employee",
+      "username": "employee",
+      "email": "emp@123.com",
+      "password": "1234"
+    },
+    {
+      "id": "2",
+      "name": "Jane",
+      "role": "employee",
+      "username": "Jane@123",
+      "email": "jane@123.com",
+      "password": "1234"
+    },
+    {
+      "id": "3",
+      "name": "Anil",
+      "role": "reviewer",
+      "username": "reviewer",
+      "email": "anil@123.com",
+      "password": "1234"
+    },
+    {
+      "id": "4",
+      "name": "Jack",
+      "role": "employee",
+      "username": "Jack@1234",
+      "email": "jack@123.com",
+      "password": "1234"
+    },
+    {
+      "id": "5",
+      "name": "Neeraja Abraham",
+      "role": "employee",
+      "username": "employee",
+      "email": "employee@12.com",
+      "password": "1234"
+    }
+  ]
+}

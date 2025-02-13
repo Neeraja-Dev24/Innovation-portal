@@ -1,102 +1,201 @@
-/* Flexbox based design for Detail Page */
+
 .detail-content {
-    padding: 30px;
-    background-color: #f4f7fc;
+  padding: 30px;
+  background-color: #f4f7fc;
+}
+
+.detail-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  margin: 20px;
+}
+
+.back-button {
+  font-size: 16px;
+  color: #1890ff;
+  margin-bottom: 20px;
+  display: block;
+}
+.detail-container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.user-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #e6f7ff;
+  border-radius: 10px;
+  padding: 20px;
+  flex: 1;
+  min-width: 250px;
+}
+
+
+.user-image {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 2px solid #1890ff;
+}
+
+.user-info {
+  font-size: 16px;
+  color: #333;
+}
+
+.status {
+  font-size: 14px;
+  color: #1890ff;
+}
+
+.approved {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
+
+.accepted-count {
+  font-size: 14px;
+  color: #666;
+}
+
+.idea-details-container {
+  flex: 2;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 300px;
+}
+
+
+.idea-title {
+  font-size: 24px;
+  color: #333;
+}
+
+.category {
+  font-size: 18px;
+  color: #1890ff;
+}
+
+.idea-description {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.idea-image {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+button {
+  font-size: 16px;
+  color: #1890ff;
+}
+.table-responsive {
+  width: 100%;
+  overflow-x: auto; 
+  -webkit-overflow-scrolling: touch; 
+}
+
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+img.uploaded-image {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .detail-container {
+    gap: 20px;
   }
-  
-  .detail-card {
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 24px;
+  .idea-details-container {
+    min-width: 300px;
   }
-  
+}
+
+@media (max-width: 768px) {
+  .detail-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .user-info-container,
+  .idea-details-container {
+    min-width: 100%;
+  }
   .back-button {
-    font-size: 16px;
-    color: #1890ff;
-    margin-bottom: 20px;
+    margin-left: 10px;
+  }
+  .idea-details-container {
+    padding: 15px;
+  }
+  .table-responsive {
+    overflow-x: auto; 
     display: block;
   }
-  
-  .detail-container {
-    display: flex;
-    gap: 30px;
-    flex-wrap: wrap;
+
+  .custom-table {
+    width: max-content; 
+    min-width: 700px;
   }
-  
-  .user-info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-    text-align: center;
-    background-color: #e6f7ff;
-    border-radius: 10px;
-    padding: 20px;
-    min-width: 250px;
+  .attachments-container {
+    gap: 8px;
   }
-  
-  .user-image {
-    border-radius: 50%;
+  .uploaded-image {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+/* For very small devices */
+@media (max-width: 480px) {
+  .back-button {
+    font-size: 14px;
     margin-bottom: 15px;
-    border: 2px solid #1890ff;
   }
-  
   .user-info {
-    font-size: 16px;
-    color: #333;
-  }
-  
-  .status {
     font-size: 14px;
-    color: #1890ff;
   }
-  
-  .approved {
-    color: green;
-  }
-  
-  .rejected {
-    color: red;
-  }
-  
+  .status,
   .accepted-count {
-    font-size: 14px;
-    color: #666;
+    font-size: 12px;
   }
-  
-  .idea-details-container {
-    flex: 2;
-    background-color: #f7f7f7;
-    border-radius: 10px;
-    padding: 20px;
-    min-width: 400px;
-  }
-  
   .idea-title {
-    font-size: 24px;
-    color: #333;
+    font-size: 20px;
   }
-  
   .category {
-    font-size: 18px;
-    color: #1890ff;
+    font-size: 16px;
   }
-  
   .idea-description {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #555;
+    font-size: 14px;
   }
-  
-  .idea-image {
+  .custom-table {
+    min-width: 600px; 
+  }
+  .attachments-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .attachment-item {
+    width: 100%;
+    text-align: center;
+  }
+  .uploaded-image {
     max-width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
+    height: auto;
   }
-  
-  button {
-    font-size: 16px;
-    color: #1890ff;
-  }
-  
+}
+
+

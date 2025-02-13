@@ -1,21 +1,23 @@
-/* Ensure the layout covers the entire screen */
-.layout-container {
+
+.dashboard-layout {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+  background: #f0f2f5;
 }
 
-/* Header styles */
-.site-header {
+
+.dashboard-header {
+  background: #001529;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  height: 64px;
+}
+
+.header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
-  background: #001529;
-  color: #fff;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  width: 100%;
 }
 
 .welcome-message {
@@ -23,38 +25,109 @@
   color: #fff;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
+
 .logout-button {
-  background-color: #1890ff;
-  border-color: #1890ff;
+  border: none;
+  color: #fff;
+  margin-right: 16px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-/* Content Area */
-.content-area {
-  margin-left: 24px; /* Offset for the sidebar */
-  padding: 24px;
+
+.hamburger-menu {
+  display: none;
+  font-size: 24px;
+  color: #fff;
 }
 
-.card-header {
-  text-align: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
+
+.dashboard-sidebar {
+  background: #001529;
+  width: 240px;
+  overflow: auto;
 }
 
-.card-title {
-  color: #1890ff;
+
+.dashboard-menu {
+  background-color: #001529;
+  border-right: none;
 }
 
-.image-preview {
-  width: 50px;
+.ant-menu-item {
+  color: #ffffff !important;
+  font-size: 16px;
+  padding: 16px 24px;
+  transition: all 0.3s;
 }
 
-.table-container {
-  padding: 24px;
-  background-color: #fff;
+.ant-menu-item:hover {
+  background-color: rgba(24, 144, 255, 0.2) !important;
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+.ant-menu-item-selected {
+  background-color: #1890ff !important;
+  color: #ffffff !important;
+  font-weight: bold;
   border-radius: 4px;
 }
 
-button.ant-btn-primary {
-  background-color: #1890ff;
-  border-color: #1890ff;
+
+.dashboard-main {
+  padding: 20px;
+  background: #f0f2f5;
+}
+
+.dashboard-content {
+  background: #fff;
+  padding: 24px;
+  border-radius: 4px;
+  min-height: 380px;
+  margin: 20px;
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    padding: 10px;
+    height: 56px;
+  }
+
+  .dashboard-sidebar {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: inline-block;
+  }
+  
+  .dashboard-content {
+    padding: 10px;
+    margin: 10px;
+  }
+}
+
+
+.mobile-drawer .ant-drawer-body {
+  padding: 0;
+  background: #001529;
+}
+
+.mobile-drawer .ant-menu {
+  background-color: #001529;
+}
+
+.ant-table-placeholder {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+  font-size: 16px;
 }

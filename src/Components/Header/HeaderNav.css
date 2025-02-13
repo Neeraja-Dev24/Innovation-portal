@@ -1,20 +1,7 @@
 .hedernav{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     color:white;
   
-}
-.head-title{
-    display: flex;
-    justify-content: flex-start;
-}
-.head-login{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: 'pointer';
-    gap:5px;
-}
-.login, .signup{
-    cursor: pointer;
 }

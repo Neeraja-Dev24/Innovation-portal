@@ -1,0 +1,62 @@
+.approved-ideas-container {
+    padding: 20px;
+    max-width: 100%;
+  }
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  .custom-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .custom-table .ant-table-thead > tr > th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap; 
+  }
+  
+
+  .custom-table .ant-table-tbody > tr > td {
+    text-align: left;
+    white-space: nowrap; 
+  }
+  
+
+  @media (max-width: 768px) {
+    .table-responsive {
+      overflow-x: auto;
+      display: block;
+    }
+  
+    .custom-table {
+      width: max-content; 
+      min-width: 700px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .custom-table {
+      min-width: 600px; 
+    }
+  }
+  .action-buttons {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .status-pending {
+    color: orange;
+  }
+  
+  .status-approved {
+    color: green;
+  }
+  
+  .status-rejected {
+    color: red;
+  }
