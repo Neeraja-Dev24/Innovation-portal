@@ -1,27 +1,47 @@
-import { createContext, useState } from "react";
+import { useState, useEffect, useCallback, useMemo } from "react";
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-
-export const UserContext = createContext();
+import UserContext from "./UserContext";
 
 export const UserProvider = ({ children }) => {
-  const [loggedInUser, setLoggedInUser] = useState(null);
+  const navigate = useNavigate();
 
-  const setUser = (user) => {
-    setLoggedInUser(user);
-  };
+  // Memoized user data from localStorage 
+  const storedUser = useMemo(() => {
+    try {
+      return JSON.parse(localStorage.getItem("loggedInUser")) || null;
+    } catch {
+      return null;
+    }
+  }, []);
 
-  const logOut = () => {
+  const [loggedInUser, setLoggedInUser] = useState(storedUser);
+
+  // Only update localStorage when the user actually changes
+  useEffect(() => {
+    loggedInUser
+      ? localStorage.setItem("loggedInUser", JSON.stringify(loggedInUser))
+      : localStorage.removeItem("loggedInUser");
+  }, [loggedInUser]);
+
+  const setUser = useCallback((user) => {
+    setLoggedInUser(user && Object.keys(user).length ? user : null);
+  }, []);
+
+  const logOut = useCallback(() => {
+    navigate("/login");
+    localStorage.removeItem("loggedInUser");
     setLoggedInUser(null);
-  };
+  }, [navigate]);
 
   return (
     <UserContext.Provider value={{ loggedInUser, setUser, logOut }}>
-      {children}
+      <div aria-live="polite">{children}</div>
     </UserContext.Provider>
   );
 };
 
-// Add PropTypes validation
+// PropTypes validation
 UserProvider.propTypes = {
   children: PropTypes.node.isRequired,
 };

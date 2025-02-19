@@ -12,7 +12,7 @@ const { Option } = Select;
 
 const SubmitIdeas = () => {
   const { loggedInUser } = useUser();
-  const { ideaId } = useParams();
+  const { ideaId } = useParams() || {};
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
@@ -20,6 +20,13 @@ const SubmitIdeas = () => {
   const [editorKey, setEditorKey] = useState(`editor-${ideaId || "new"}`);
   const [fileList, setFileList] = useState([]);
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    if (!loggedInUser) {
+      navigate("/login");
+    }
+  }, [loggedInUser, navigate]);
+  
 
   // If an ideaId exists, fetch its data to pre-fill the form
   useEffect(() => {
@@ -199,7 +206,7 @@ const SubmitIdeas = () => {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" block loading={loading}>
-            Submit
+          {ideaId ? "Update" : "Submit"} 
           </Button>
         </Form.Item>
       </Form>

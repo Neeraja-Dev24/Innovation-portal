@@ -13,7 +13,6 @@ import {
   message,
 } from "antd";
 import { useUser } from "../../UserContext/useUser";
-// import "./ReviewerDetailsPage.css";
 
 const { Title, Text } = Typography;
 const { TextArea } = Input;
@@ -194,32 +193,27 @@ const ReviewerDetailsPage = () => {
                 {idea.files.map((file, index) => (
                   <div key={index} className="attachment-item">
                     {file.type && file.type.startsWith("image") ? (
+                      // For images (including GIFs)
                       <img
                         src={file.url}
                         alt={file.name || "Uploaded Image"}
                         className="uploaded-image"
                       />
                     ) : file.type && file.type.includes("pdf") ? (
+                      // For PDFs, embed using an <object>
                       <object
                         data={file.url}
                         type="application/pdf"
                         width="100%"
                         height="400px"
                       >
-                        <a
-                          href={file.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
+                        <a href={file.url} target="_blank" rel="noopener noreferrer">
                           {file.name ? file.name : "View File"}
                         </a>
                       </object>
                     ) : (
-                      <a
-                        href={file.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
+                      // For other file types (e.g., zip, doc), display a download/view link
+                      <a href={file.url} target="_blank" rel="noopener noreferrer">
                         {file.name ? file.name : "Download File"}
                       </a>
                     )}

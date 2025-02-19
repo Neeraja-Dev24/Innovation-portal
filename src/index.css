@@ -1,5 +1,5 @@
-h3.ant-typography.css-dev-only-do-not-override-xex5fb {
-    color: white;
+h3.ant-typography{
+    color: white !important;
     margin: 0;
 }
 img.uploaded-image {

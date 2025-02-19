@@ -1,32 +1,45 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { Form, Input, Button, message, Typography, Card, Row, Col } from "antd";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../../UserContext/useUser";
 import "./Login.css";
 
 function Login() {
-  const [loading, setLoading] = useState(false);
   const [users, setUsers] = useState([]);
   const navigate = useNavigate();
-  const { setUser } = useUser();
+  const { setUser, loggedInUser } = useUser();
 
-  useEffect(() => {
-    fetch("http://localhost:5000/users")
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => console.error("Error fetching users:", error));
+  // Fetch users only once (memoized)
+  const fetchUsers = useCallback(async () => {
+    try {
+      const response = await fetch("http://localhost:5000/users");
+      const data = await response.json();
+      setUsers(data);
+    } catch (error) {
+      console.error("Error fetching users:", error);
+    }
   }, []);
 
-  const handleLogin = (values) => {
-    setLoading(true);
+  useEffect(() => {
+    fetchUsers();
+  }, [fetchUsers]);
+
+  // Redirect if already logged in
+  useEffect(() => {
+    if (loggedInUser) {
+      navigate(loggedInUser.role === "employee" ? "/employee-dashboard/approvedIdeas" : "/reviewer-dashboard/approvedIdeas");
+    }
+  }, [loggedInUser, navigate]);
+
+  const handleLogin = async (values) => {
     const user = users.find(
-      (user) =>
-        user.username === values.username && user.password === values.password
+      (u) => u.username === values.username && u.password === values.password
     );
 
     if (user) {
       localStorage.setItem("isLoggedIn", "true");
       localStorage.setItem("role", user.role);
+
       setUser({
         name: user.name,
         role: user.role,
@@ -36,18 +49,13 @@ function Login() {
       });
 
       message.success("Login successful!");
-      setLoading(false);
       setTimeout(() => {
-        if (user.role === "employee") {
-          navigate("/employee-dashboard/approvedIdeas");
-        } else if (user.role === "reviewer") {
-          navigate("/reviewer-dashboard");
-        }
-      }, 1500);
+        navigate(user.role === "employee" ? "/employee-dashboard/approvedIdeas" : "/reviewer-dashboard/approvedIdeas");
+      }, 500);
     } else {
       message.error("Invalid username or password");
-      setLoading(false);
     }
+
   };
 
   return (
@@ -59,40 +67,31 @@ function Login() {
               <Form.Item
                 label="Username"
                 name="username"
-                rules={[
-                  { required: true, message: "Please enter your username!" },
-                ]}
+                rules={[{ required: true, message: "Please enter your username!" }]}
               >
-                <Input placeholder="Enter your username" />
+                <Input placeholder="Enter your username" autoComplete="username" aria-label="Username" />
               </Form.Item>
               <Form.Item
                 label="Password"
                 name="password"
-                rules={[
-                  { required: true, message: "Please enter your password!" },
-                ]}
+                rules={[{ required: true, message: "Please enter your password!" }]}
               >
-                <Input.Password placeholder="Enter your password" />
+                <Input.Password placeholder="Enter your password" autoComplete="current-password" aria-label="Password" />
               </Form.Item>
               <Form.Item>
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  block
-                  loading={loading}
-                >
+                <Button type="primary" htmlType="submit" block  aria-label="Login Button">
                   Login
                 </Button>
               </Form.Item>
             </Form>
             <Row justify="space-between">
               <Col>
-                <Typography.Link onClick={() => navigate("/forgot-password")}>
+                <Typography.Link role="link" aria-label="Forgot Password" onClick={() => navigate("/forgot-password")}>
                   Forgot Password?
                 </Typography.Link>
               </Col>
               <Col>
-                <Typography.Link onClick={() => navigate("/signup")}>
+                <Typography.Link role="link" aria-label="Sign Up" onClick={() => navigate("/signup")}>
                   {`Don't have an account? Sign Up`}
                 </Typography.Link>
               </Col>

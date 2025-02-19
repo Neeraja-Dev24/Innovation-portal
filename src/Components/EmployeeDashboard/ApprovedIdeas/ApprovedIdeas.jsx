@@ -1,43 +1,55 @@
-import { Table, Button, Typography, Spin } from "antd";
+import { Table, Button} from "antd";
 import { EyeOutlined } from "@ant-design/icons";
 import { useUser } from "../../../UserContext/useUser";
 import { useNavigate } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import "./ApprovedIdeas.css";
-
-const { Title } = Typography;
 
 const ApprovedIdeas = () => {
   const [ideas, setIdeas] = useState([]);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const { loggedInUser } = useUser();
+  const { loggedInUser, setUser } = useUser();
 
-  // Define the function outside useEffect so it can be used in columns
-  const handleDetailPage = (id) => {
-   (loggedInUser && loggedInUser.role === "employee") ?
-      navigate(`/employee-dashboard/details/${id}`) :
-      navigate(`/reviewer-dashboard/details/${id}`) 
-    
-  };
-
+  // Retrieve stored user session on first mount
   useEffect(() => {
     if (!loggedInUser) {
-      navigate("/login"); 
-      return;
+      const storedUser = localStorage.getItem("loggedInUser");
+      storedUser?setUser(JSON.parse(storedUser)):navigate("/login");
+     
     }
-    fetch("http://localhost:5001/ideasdata")
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          setIdeas(data.filter((item) => item.status === "Approved"));
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching ideas:", error);
-      })
-      .finally(() => setLoading(false));
-  }, [loggedInUser, navigate]);
+  }, [loggedInUser, navigate, setUser]);
+
+  // Fetch approved ideas
+  const fetchApprovedIdeas = useCallback(async () => {
+    setLoading(true);
+    try {
+      const response = await fetch("http://localhost:5001/ideasdata");
+      if (!response.ok) throw new Error("Failed to fetch ideas");
+
+      const data = await response.json();
+      setIdeas(data.filter((item) => item.status === "Approved"));
+    } catch (error) {
+      console.error("Error fetching ideas:", error);
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    fetchApprovedIdeas();
+  }, [fetchApprovedIdeas]);
+
+  // Navigate to detail page
+  const handleDetailPage = (id) => {
+    navigate(
+      `/${
+        loggedInUser?.role === "employee"
+          ? "employee-dashboard"
+          : "reviewer-dashboard"
+      }/details/${id}`
+    );
+  };
 
   const columns = [
     {
@@ -63,6 +75,7 @@ const ApprovedIdeas = () => {
       dataIndex: "publishedDate",
       key: "publishedDate",
       sorter: (a, b) => new Date(a.publishedDate) - new Date(b.publishedDate),
+      render: (date) => new Date(date).toLocaleDateString(),
     },
     {
       title: "Approved By",
@@ -85,22 +98,17 @@ const ApprovedIdeas = () => {
     },
   ];
 
-  if (loading) {
-    return <Spin size="large" className="loading-spinner" />;
-  }
-
   return (
     <div className="approved-ideas-container">
-      <Title level={4} className="section-title">Approved Ideas</Title>
       <div className="table-responsive">
-        <Table
-          columns={columns}
-          dataSource={ideas}
-          rowKey="id"
-          pagination={{ pageSize: 5 }}
-          loading={loading}
-          className="custom-table"  
-        />
+          <Table
+            columns={columns}
+            dataSource={ideas}
+            rowKey="id"
+            loading={loading}
+            pagination={{ pageSize: 5 }}
+            className="custom-table"
+          />
       </div>
     </div>
   );

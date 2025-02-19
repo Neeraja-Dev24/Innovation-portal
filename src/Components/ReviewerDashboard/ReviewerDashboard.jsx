@@ -9,7 +9,7 @@ const { Header, Sider, Content } = Layout;
 const { Title } = Typography;
 
 const ReviewerDashboard = () => {
-  const { loggedInUser, setLoggedInUser } = useUser();
+  const { loggedInUser,logOut } = useUser();
   const navigate = useNavigate();
   const location = useLocation();
   const [selectedMenu, setSelectedMenu] = useState('pendingReviews');
@@ -38,8 +38,7 @@ const ReviewerDashboard = () => {
   };
 
   const handleLogout = () => {
-    navigate('/login');
-    setLoggedInUser(null);
+    logOut();
   };
 
   return (

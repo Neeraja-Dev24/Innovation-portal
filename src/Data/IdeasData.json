@@ -330,125 +330,96 @@
     },
     {
       "id": "10",
-      "category": "Education",
-      "title": "Tech1",
-      "description": "<p>test</p>",
+      "category": "Security",
+      "title": "Security Rules- 13-02-2025",
+      "description": "<p>Security Rules- 13-02-2025</p>",
       "files": [
         {
-          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
-          "type": "application/pdf",
-          "url": "blob:http://localhost:5174/52801a3e-31b9-4771-9b1c-2d153eaaafa5"
+          "name": "200.webp",
+          "type": "image/webp",
+          "url": "blob:http://localhost:5173/443fdf48-19b5-41ba-8c11-46c5b1644e26"
         },
         {
-          "name": "d8021c42-b6a2-45cb-8928-a4fd2a8d9101.xlsx",
-          "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "url": "blob:http://localhost:5174/2c1d3a29-232f-4d3c-a145-9cb49d141506"
-        }
-      ],
-      "status": "Approved",
-      "user_id": "1",
-      "username": "employee",
-      "reviewerDetails": [],
-      "publishedDate": "2025-02-11",
-      "acceptedCount": 0,
-      "key": 10
-    },
-    {
-      "category": "Business",
-      "title": "idea1",
-      "description": "<p>sdfg</p>",
-      "files": [
-        {
-          "name": "d8021c42-b6a2-45cb-8928-a4fd2a8d9101.xlsx",
-          "url": "blob:http://localhost:5174/4e4848db-9f3a-40b4-a1a4-af4f57a05f79"
-        },
-        {
-          "name": "Aimy_Fairy_Tales_YT_Banner.png",
+          "name": "Aimy_Fairy_Tales_Banner_Updated.png",
           "type": "image/png",
-          "url": "blob:http://localhost:5174/bc5428e0-dd65-430f-b1fc-3cf386967b67"
+          "url": "blob:http://localhost:5173/8102d855-5aec-4826-a881-f84932d11607"
         }
       ],
       "status": "Approved",
       "user_id": "1",
       "username": "employee",
+      "email": "emp@123.com",
       "reviewerDetails": [
         {
-          "id": "1739345660953",
+          "id": "1739448281081",
           "reviewerId": "3",
           "name": "Anil",
-          "comments": "Testdfghjk",
-          "approvedDate": "2025-02-12",
+          "comments": "Great Innovation",
+          "approvedDate": "2025-02-13",
           "decision": "Approved"
         }
       ],
-      "publishedDate": "2025-02-11",
-      "acceptedCount": 2,
+      "publishedDate": "2025-02-13",
+      "acceptedCount": 1,
+      "key": 10
+    },
+    {
+      "category": "Education",
+      "title": "2025  Eucation highlights",
+      "description": "<p>edited</p>",
+      "files": [
+        {
+          "name": "200.webp",
+          "url": "blob:http://localhost:5173/f9940704-2d06-4f6b-9000-b5f8977b0ee3"
+        },
+        {
+          "name": "image (1).png",
+          "url": "blob:http://localhost:5173/58661b39-5f02-4752-804f-557744efbb60"
+        },
+        {
+          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
+          "url": "blob:http://localhost:5173/60fa721f-70a8-48ea-8bf3-01252ba3b5c6"
+        }
+      ],
+      "status": "Approved",
+      "user_id": "1",
+      "username": "employee",
+      "email": "emp@123.com",
+      "reviewerDetails": [
+        {
+          "id": "1739502514927",
+          "reviewerId": "3",
+          "name": "Anil",
+          "comments": "tested, great innovation!!!!!!!!!!!!!!",
+          "approvedDate": "2025-02-14",
+          "decision": "Approved"
+        }
+      ],
+      "publishedDate": "2025-02-14",
+      "acceptedCount": 1,
       "id": "11",
       "key": 11
     },
     {
-      "id": "12",
-      "category": "Security",
-      "title": "Tech1",
-      "description": "<ul>\n<li>wse</li>\n<li>test</li>\n</ul>",
-      "files": [
-        {
-          "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
-          "type": "application/pdf",
-          "url": "blob:http://localhost:5173/92c1a5eb-6831-4ab5-bc39-3eddf0cabca5"
-        }
-      ],
-      "status": "Approved",
-      "user_id": "1",
-      "username": "employee",
-      "reviewerDetails": [],
-      "publishedDate": "2025-02-11",
-      "acceptedCount": 0,
-      "key": 12
-    },
-    {
-      "id": "13",
-      "category": "Education",
-      "title": "Test education",
-      "description": "<p>234rtyhj</p>",
-      "files": [
-        {
-          "name": "Aimy_Fairy_Tales_Banner.png",
-          "type": "image/png",
-          "url": "blob:http://localhost:5173/3c0f1c62-1f2a-445e-ada2-458ff1fc4ccf"
-        }
-      ],
-      "status": "Rejected",
-      "user_id": "1",
-      "username": "employee",
-      "email": "john@gmail.com",
-      "reviewerDetails": [
-        {
-          "id": "1739345931285",
-          "reviewerId": "3",
-          "name": "Anil",
-          "comments": "testrgbhngfjyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
-          "approvedDate": "2025-02-12",
-          "decision": "Approved"
-        }
-      ],
-      "publishedDate": "2025-02-12",
-      "acceptedCount": 1,
-      "key": 13
-    },
-    {
+      "id": 12,
       "category": "Business",
-      "title": "gif data test",
-      "description": "<p>Resubmit my idea with updation</p>",
+      "title": "Tech1Tech1Tech1Tech1Tech1Tech1Tech1Tech1",
+      "description": "<p>vvhbbjbmjn</p>",
       "files": [
         {
           "name": "200.webp",
-          "url": "blob:http://localhost:5173/c0105382-c1c4-49e4-839e-b23c328fa3ec"
+          "type": "image/webp",
+          "url": "blob:http://localhost:5174/c195225e-c683-49ee-a659-013c9da72e68"
+        },
+        {
+          "name": "Aimy_Fairy_Tales_Banner_Updated.png",
+          "type": "image/png",
+          "url": "blob:http://localhost:5174/4e0dc7f4-7c78-4567-a413-9ee4bccd1d60"
         },
         {
           "name": "Format_Infosys Profile_Full Name_Role 3 1.pdf",
           "type": "application/pdf",
-          "url": "blob:http://localhost:5173/c323fbf0-0b2f-4f47-8fad-8c47835e3947"
+          "url": "blob:http://localhost:5174/96575337-e554-4c10-bea4-f5ca5fa3e9ad"
         }
       ],
       "status": "Pending",
@@ -456,10 +427,30 @@
       "username": "employee",
       "email": "emp@123.com",
       "reviewerDetails": [],
-      "publishedDate": "2025-02-13",
+      "publishedDate": "2025-02-14",
       "acceptedCount": 0,
-      "id": "14",
-      "key": 14
+      "key": 12
+    },
+    {
+      "id": 13,
+      "category": "Business",
+      "title": "Tech1",
+      "description": "<p>test</p>",
+      "files": [
+        {
+          "name": "200.webp",
+          "type": "image/webp",
+          "url": "blob:http://localhost:5175/c33069bc-804e-4665-ab90-53f014dd13c0"
+        }
+      ],
+      "status": "Pending",
+      "user_id": "1",
+      "username": "employee",
+      "email": "emp@123.com",
+      "reviewerDetails": [],
+      "publishedDate": "2025-02-17",
+      "acceptedCount": 0,
+      "key": 13
     }
   ]
 }
