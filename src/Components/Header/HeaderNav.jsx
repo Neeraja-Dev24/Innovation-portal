@@ -8,7 +8,7 @@ const HeaderNav = () => {
   return (
     <div>
       <Header className="hedernav">
-          <Title level={3}>Innovation Portal</Title>
+          <Title level={3} data-testid="header-title">Innovation Portal</Title>
       </Header>
     </div>
   );

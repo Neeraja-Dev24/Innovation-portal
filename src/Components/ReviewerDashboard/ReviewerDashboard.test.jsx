@@ -1,10 +1,10 @@
-import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { render, screen, fireEvent} from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { UserProvider } from "../../UserContext/UserProvider";
 import ReviewerDashboard from "./ReviewerDashboard";
-import { test, vi } from "vitest";
+import { test, vi, describe, expect } from "vitest";
 import "@testing-library/jest-dom";
-import { Layout, Typography, Menu, Button } from "antd";
+
 
 vi.mock("antd", async () => {
   const antd = await vi.importActual("antd");
@@ -40,7 +40,6 @@ describe("ReviewerDashboard", () => {
       </UserProvider>
     );
 
-     // Match the welcome message even if it's broken up across elements
   expect(
     screen.getByText((content) => content.includes("Welcome, John Doe") && content.includes("(Reviewer)!"))
   ).toBeInTheDocument();
@@ -48,35 +47,25 @@ describe("ReviewerDashboard", () => {
     // expect(screen.getByText("Pending Ideas")).toBeInTheDocument();
   });
 
-//   test("navigates to selected menu item", () => {
-//     render(
-//       <MemoryRouter>
-//         <ReviewerDashboard />
-//       </MemoryRouter>
-//     );
+  test("navigates to selected menu item", () => {
+    render(
+      <MemoryRouter>
+        <ReviewerDashboard />
+      </MemoryRouter>
+    );
 
-//     fireEvent.click(screen.getByText("My Ideas"));
-//     expect(mockNavigate).toHaveBeenCalledWith("/employee-dashboard/myIdeas");
-//   });
+    fireEvent.click(screen.getByText("Approved Ideas"));
+    expect(mockNavigate).toHaveBeenCalledWith("/reviewer-dashboard/approvedIdeas");
+  });
 
-//   test("logs out the user when clicking the logout button", () => {
-//     render(
-//       <MemoryRouter>
-//         <ReviewerDashboard />
-//       </MemoryRouter>
-//     );
+  test("logs out the user when clicking the logout button", () => {
+    render(
+      <MemoryRouter>
+        <ReviewerDashboard />
+      </MemoryRouter>
+    );
 
-//     fireEvent.click(screen.getByRole("button", { name: /logout/i }));
-//     expect(mockLogOut).toHaveBeenCalled();
-//   });
-//   test('opens and closes the drawer menu', async () => {
-//     render(<EmployeeDashboard />);
-//     fireEvent.click(screen.getByRole('button', { name: /open menu/i }));
-//     expect(await screen.findByTestId('drawer')).toBeInTheDocument();
-//     fireEvent.click(screen.getByRole('button', { name: /close/i }));
-//     await waitFor(() => {
-//       expect(screen.queryByTestId('drawer')).not.toBeInTheDocument();
-//     });
-// });
-
+    fireEvent.click(screen.getByRole("button", { name: /logout/i }));
+    expect(mockLogOut).toHaveBeenCalled();
+  });
 });

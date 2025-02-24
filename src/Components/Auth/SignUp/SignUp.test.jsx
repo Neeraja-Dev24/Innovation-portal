@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
-import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { vi } from "vitest";
+import { MemoryRouter} from "react-router-dom";
+import { afterEach, beforeAll, beforeEach, describe, expect, test, vi } from "vitest";
 import Signup from "./Signup";
 import { UserProvider } from "../../../UserContext/UserProvider";
 
